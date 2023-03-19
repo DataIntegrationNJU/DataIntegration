@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<courses>
+  <course>
+    <id>05075001</id>
+    <name>BIM概论与建模</name>
+    <score>2</score>
+    <teacher>陈艳云</teacher>
+    <location>北教302</location>
+  </course>
+  <course>
+    <id>05075003</id>
+    <name>会计信息系统</name>
+    <score>3</score>
+    <teacher>郑细端</teacher>
+    <location>南教302</location>
+  </course>
+  <course>
+    <id>05075010</id>
+    <name>工程造价信息管理</name>
+    <score>2</score>
+    <teacher>傅再育</teacher>
+    <location>南教513</location>
+  </course>
+</courses>

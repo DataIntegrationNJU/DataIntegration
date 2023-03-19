@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.w3schools.com"
+           xmlns="http://www.w3schools.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="Sno">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Snm">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Sex">
+        <xs:simpleType ><!--定义性别，只能为男或者女-->
+            <xs:restriction base="xs:string" >
+                <xs:pattern value="男|女"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Sde">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+
+
+    <xs:element name="student">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Sno" />
+                <xs:element ref="Snm" />
+                <xs:element ref="Sex" />
+                <xs:element ref="Sde"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="students">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="student" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

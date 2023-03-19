@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<courses>
+  <course>
+    <Cno>0B01</Cno>
+    <Cnm>古建筑鉴定分析学</Cnm>
+    <Cpt>2</Cpt>
+    <Tec>季勇</Tec>
+    <Pla>北教302</Pla>
+  </course>
+  <course>
+    <Cno>0B03</Cno>
+    <Cnm>古建筑鉴定分析学</Cnm>
+    <Cpt>3</Cpt>
+    <Tec>黄建秋</Tec>
+    <Pla>南教302</Pla>
+  </course>
+  <course>
+    <Cno>0B07</Cno>
+    <Cnm>古建筑鉴定分析学</Cnm>
+    <Cpt>2</Cpt>
+    <Tec>贺云翱</Tec>
+    <Pla>北教102</Pla>
+  </course>
+</courses>

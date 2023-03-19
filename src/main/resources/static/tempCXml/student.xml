@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="gb2312"?>
+<students xmlns="http://www.w3schools.com"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="student.xsd">
+    <student>
+        <Sno>190322001</Sno>
+        <Snm>贾仙盈</Snm>
+        <Sex>女</Sex>
+        <Sde>历史学院</Sde>
+    </student>
+
+    <student>
+        <Sno>190322002</Sno>
+        <Snm>曹尚清</Snm>
+        <Sex>男</Sex>
+        <Sde>历史学院</Sde>
+    </student>
+
+    <student>
+        <Sno>190322003</Sno>
+        <Snm>樊婕盈</Snm>
+        <Sex>女</Sex>
+        <Sde>历史学院</Sde>
+    </student>
+</students>

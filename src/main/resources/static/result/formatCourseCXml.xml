@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<courses>
+  <course>
+    <id>0B01</id>
+    <name>古建筑鉴定分析学</name>
+    <score>2</score>
+    <teacher>季勇</teacher>
+    <location>北教302</location>
+  </course>
+  <course>
+    <id>0B03</id>
+    <name>古建筑鉴定分析学</name>
+    <score>3</score>
+    <teacher>黄建秋</teacher>
+    <location>南教302</location>
+  </course>
+  <course>
+    <id>0B07</id>
+    <name>古建筑鉴定分析学</name>
+    <score>2</score>
+    <teacher>贺云翱</teacher>
+    <location>北教102</location>
+  </course>
+</courses>
