@@ -1,26 +1,2 @@
 <?xml version="1.0" encoding="gb2312"?>
-<courses>
-    <course>
-        <Cno>0B01</Cno>
-        <Cnm>古建筑鉴定分析学</Cnm>
-        <Cpt>2</Cpt>
-        <Tec>季勇</Tec>
-        <Pla>北教302</Pla>
-    </course>
-
-    <course>
-        <Cno>0B03</Cno>
-        <Cnm>古建筑鉴定分析学</Cnm>
-        <Cpt>3</Cpt>
-        <Tec>黄建秋</Tec>
-        <Pla>南教302</Pla>
-    </course>
-
-    <course>
-        <Cno>0B07</Cno>
-        <Cnm>古建筑鉴定分析学</Cnm>
-        <Cpt>2</Cpt>
-        <Tec>贺云翱</Tec>
-        <Pla>北教102</Pla>
-    </course>
-</courses>
+<courses><course><Cno>0B01</Cno><Cnm>古建筑鉴定分析学</Cnm><Cpt>2</Cpt><Tec>季勇</Tec><Pla>北教302</Pla></course><course><Cno>0B03</Cno><Cnm>考古学理论与方法</Cnm><Cpt>3</Cpt><Tec>黄建秋</Tec><Pla>南教302</Pla></course><course><Cno>0B07</Cno><Cnm>文物学研究</Cnm><Cpt>2</Cpt><Tec>贺云翱</Tec><Pla>北教102</Pla></course><course><Cno>0B10</Cno><Cnm>城市考古与城市文化</Cnm><Cpt>2</Cpt><Tec>傅再育</Tec><Pla>南教513</Pla></course><course><Cno>0B29</Cno><Cnm>先秦两汉农业考古研究</Cnm><Cpt>2</Cpt><Tec>刘兴林</Tec><Pla>南教318</Pla></course><course><Cno>0B55</Cno><Cnm>原生建筑研究</Cnm><Cpt>1</Cpt><Tec>程晓中</Tec><Pla>实验室302</Pla></course><course><Cno>0B63</Cno><Cnm>中国特色社会主义</Cnm><Cpt>2</Cpt><Tec>张良仁</Tec><Pla>南教303</Pla></course><course><Cno>0B78</Cno><Cnm>中国古代美术史研究</Cnm><Cpt>2</Cpt><Tec>马晓、周学鹰</Tec><Pla>北教302</Pla></course><course><Cno>0B89</Cno><Cnm>明四家研究</Cnm><Cpt>2</Cpt><Tec>郑怀瑾</Tec><Pla>南教505</Pla></course><course><Cno>0B98</Cno><Cnm>明清瓷器鉴定</Cnm><Cpt>2</Cpt><Tec>张铮燕</Tec><Pla>南教402</Pla></course></courses>

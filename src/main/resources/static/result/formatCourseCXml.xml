@@ -10,16 +10,65 @@
   </course>
   <course>
     <id>0B03</id>
-    <name>古建筑鉴定分析学</name>
+    <name>考古学理论与方法</name>
     <score>3</score>
     <teacher>黄建秋</teacher>
     <location>南教302</location>
   </course>
   <course>
     <id>0B07</id>
-    <name>古建筑鉴定分析学</name>
+    <name>文物学研究</name>
     <score>2</score>
     <teacher>贺云翱</teacher>
     <location>北教102</location>
+  </course>
+  <course>
+    <id>0B10</id>
+    <name>城市考古与城市文化</name>
+    <score>2</score>
+    <teacher>傅再育</teacher>
+    <location>南教513</location>
+  </course>
+  <course>
+    <id>0B29</id>
+    <name>先秦两汉农业考古研究</name>
+    <score>2</score>
+    <teacher>刘兴林</teacher>
+    <location>南教318</location>
+  </course>
+  <course>
+    <id>0B55</id>
+    <name>原生建筑研究</name>
+    <score>1</score>
+    <teacher>程晓中</teacher>
+    <location>实验室302</location>
+  </course>
+  <course>
+    <id>0B63</id>
+    <name>中国特色社会主义</name>
+    <score>2</score>
+    <teacher>张良仁</teacher>
+    <location>南教303</location>
+  </course>
+  <course>
+    <id>0B78</id>
+    <name>中国古代美术史研究</name>
+    <score>2</score>
+    <teacher>马晓、周学鹰</teacher>
+    <location>北教302</location>
+  </course>
+  <course>
+    <id>0B89</id>
+    <name>明四家研究</name>
+    <score>2</score>
+    <teacher>郑怀瑾</teacher>
+    <location>南教505</location>
+  </course>
+  <course>
+    <id>0B98</id>
+    <name>明清瓷器鉴定</name>
+    <score>2</score>
+    <teacher>张铮燕</teacher>
+    <location>南教402</location>
   </course>
 </courses>

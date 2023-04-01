@@ -63,7 +63,7 @@ public class IntegrationResolver {
             case "A": {
                 //向A server 发送请求
                 Map<String, String> params = new HashMap<>();
-                String urlA = "";
+                String urlA = "http://192.168.10.2:9092/integration/sendXML";
                 //获得xml文件的string形式
                 ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
                 String AXmlString = AXmlFileResponse.getBody();
@@ -283,7 +283,7 @@ public class IntegrationResolver {
                 //询问server B、C
                 Map<String, String> params = new HashMap<>();
 
-                String urlC = "";
+                String urlC = "http://192.168.10.180:9090/integration/sendXML";
                 //获得xml文件的string形式
 
                 ResponseEntity<String> CXmlFileResponse = HTTPClient.sendPostRequest(urlC, "");
@@ -373,7 +373,7 @@ public class IntegrationResolver {
                     cPath = xmlResolver.classToABC(formatCXmlPath, "courseCXml1", 1);
                     System.out.println("c " + cPath);
                 }else if(requester.equals("B")){
-                    cPath = xmlResolver.classToABC(formatCXmlPath, "courseCXml1", 3);
+                    cPath = xmlResolver.classToABC(formatCXmlPath, "courseCXml1", 2);
                     System.out.println("c " + cPath);
                 }
 

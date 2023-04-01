@@ -91,13 +91,13 @@ public class Parser {
         //为请求所需的url赋值
         switch (requestServer){
             case "A":
-                url="http://192.168.10.153:9091/integration/takeCourse";
+                url="http://192.168.10.2:9092/integration/takeCourse";
                 break;
             case "B":
                 url="http://192.168.10.153:9091/integration/takeCourse";
                 break;
             case "C":
-                url="http://192.168.10.153:9091/integration/takeCourse";
+                url="http://192.168.10.180:9090/integration/takeCourse";
                 break;
         }
        /* System.out.println(request.getHeader("sno"));
@@ -152,13 +152,13 @@ public class Parser {
         //为请求所需的url赋值
         switch (requestServer){
             case "A":
-                url="http://192.168.10.153:9091/integration/delete";
+                url="http://192.168.10.2:9092/integration/delete";
                 break;
             case "B":
                 url="http://192.168.10.153:9091/integration/delete";
                 break;
             case "C":
-                url="http://192.168.10.153:9091/integration/delete";
+                url="http://192.168.10.180:9090/integration/delete";
                 break;
         }
        /* System.out.println(request.getHeader("sno"));
@@ -210,13 +210,13 @@ public class Parser {
         //为请求所需的url赋值
         switch (requestServer){
             case "A":
-                url="http://192.168.10.153:9091/integration/setGrade";
+                url="http://192.168.10.2:9092/integration/setGrade";
                 break;
             case "B":
                 url="http://192.168.10.153:9091/integration/setGrade";
                 break;
             case "C":
-                url="http://192.168.10.153:9091/integration/setGrade";
+                url="http://192.168.10.180:9090/integration/setGrade";
                 break;
         }
        /* System.out.println(request.getHeader("sno"));
