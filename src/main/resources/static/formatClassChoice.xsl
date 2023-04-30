@@ -2,9 +2,9 @@
 <xsl:stylesheet version= "1.0" xmlns:xsl= "http://www.w3.org/1999/XSL/Transform">
     <!-- 各系统课程格式转换到统一选课格式-->
     <xsl:output method= "xml" encoding= "gb2312"/>
-    <xsl:template match="Choices">
+    <xsl:template match="choices">
         <xsl:apply-templates/>
-        <Choices>
+        <choices>
             <xsl:for-each select="choice">
                 <choice>
                     <sid>
@@ -38,6 +38,6 @@
 
                 </choice>
             </xsl:for-each>
-        </Choices>
+        </choices>
     </xsl:template>
 </xsl:stylesheet>

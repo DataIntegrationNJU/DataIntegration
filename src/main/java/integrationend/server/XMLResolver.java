@@ -369,6 +369,77 @@ public class XMLResolver {
     }
 
 
+    /**
+     * 将A/B/C格式 转换成标准格式
+     * @param targetXmlFilePath 待转换的xml文件路径
+     * @param targetFilePath 转换后的文件完整路径
+     * @param des 希望转换成choice 1/class 2/student 3
+     * @return 结果文件存储路径
+     */
+    public boolean ABCToFormatGivenFullPath(String targetXmlFilePath,String targetFilePath,int des){
+        //读目标文件
+        SAXReader saxReader = new SAXReader();
+        Document document =null;
+        try {
+            document=saxReader.read(new FileReader(targetXmlFilePath));//从xml文件获取数据
+        }catch (FileNotFoundException e){
+            System.err.println("Can't find ");
+            return false;
+        }catch (DocumentException e){
+            return false;
+        }
+
+
+        //通过xsl转换文件
+        TransformerFactory factory = TransformerFactory.newInstance();
+        Transformer transformer=null;
+        try{
+            switch (des){
+                case 1:
+                    transformer=factory.newTransformer(new StreamSource(formatClassChoiceFilePath));
+                    break;
+                case 2:
+                    transformer=factory.newTransformer(new StreamSource(formatClassFilePath));
+                    break;
+                case 3:
+                    transformer=factory.newTransformer(new StreamSource(formatStudentFilePath));
+                    break;
+            }
+
+        }catch (TransformerConfigurationException e){
+            return false;
+        }
+
+        //写入
+        DocumentSource source = new DocumentSource(document);
+        DocumentResult result = new DocumentResult();
+//========XML 转换开始========
+        try{
+            transformer.transform(source, result);
+        }catch (TransformerException e){
+            System.err.println("Can't transform!");
+        }
+
+        Document transformedDoc = result.getDocument();
+        Writer w =null;
+
+        try{
+            w=new FileWriter(targetFilePath);
+            OutputFormat opf = OutputFormat.createPrettyPrint();
+            opf.setEncoding("GB2312");
+            XMLWriter xw = new XMLWriter(w, opf);
+            xw.write(transformedDoc);//todo:如果这里的文件已经存在怎么办？
+// 关闭文件流
+            xw.close();
+            w.close();
+        }catch (IOException e){
+            return false;
+        }
+        return true;
+
+    }
+
+
 
 
 

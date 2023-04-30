@@ -3,10 +3,13 @@ package integrationend.Utilities;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.StringWriter;
 
 
 public class Utility {
@@ -57,6 +60,22 @@ public class Utility {
             System.out.println("Can't find file!");
             e.printStackTrace();
         }
+    }
+
+
+    public static String formatXML(Document document, String charset) {
+        OutputFormat format = OutputFormat.createPrettyPrint();
+        format.setEncoding(charset);
+        StringWriter sw =  new StringWriter();
+        XMLWriter xw =  new XMLWriter(sw, format);
+        try {
+            xw.write(document);
+            xw.flush();
+            xw.close();
+        }  catch (IOException e) {
+            System.err.println( "格式化XML文档发生异常，请检查！");
+        }
+        return sw.toString();
     }
 
 
