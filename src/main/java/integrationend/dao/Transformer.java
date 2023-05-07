@@ -31,11 +31,11 @@ public class Transformer {
 
 
          } catch (FileNotFoundException e) {
-             System.err.println("Can't find ");
+             System.err.println("Can't find !");
          } catch (DocumentException e) {
          }
 
-
+        System.out.println(courseListStr);
 //将字符串转换成对象===================
          CourseList courseList = null;
          Reader reader = null;
@@ -76,6 +76,7 @@ public class Transformer {
 //将字符串转换成对象===================
         ChoiceList choiceList = null;
         Reader reader = null;
+        System.out.println(choiceListStr);
         try{
             JAXBContext context = JAXBContext.newInstance(ChoiceList.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();

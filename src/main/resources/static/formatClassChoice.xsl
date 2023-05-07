@@ -2,23 +2,17 @@
 <xsl:stylesheet version= "1.0" xmlns:xsl= "http://www.w3.org/1999/XSL/Transform">
     <!-- 各系统课程格式转换到统一选课格式-->
     <xsl:output method= "xml" encoding= "gb2312"/>
-    <xsl:template match="choices">
+    <xsl:template match="chooseCourses">
         <xsl:apply-templates/>
         <choices>
-            <xsl:for-each select="choice">
+            <xsl:for-each select="chooseCourse">
                 <choice>
-                    <sid>
-                        <xsl:value-of select="学号"/>
-                    </sid>
-                    <sid>
-                        <xsl:value-of select="学生编号"/>
-                    </sid>
-                    <sid>
+                    <Sno>
                         <xsl:value-of select="Sno"/>
-                    </sid>
+                    </Sno>
 
                     <cid>
-                        <xsl:value-of select="课程编号"/>
+                        <xsl:value-of select="Sde"/>
                     </cid>
 
                     <cid>
@@ -28,14 +22,6 @@
                     <score>
                         <xsl:value-of select="成绩"/>
                     </score>
-                    <score>
-                        <xsl:value-of select="得分"/>
-                    </score>
-
-                    <score>
-                        <xsl:value-of select="Grd"/>
-                    </score>
-
                 </choice>
             </xsl:for-each>
         </choices>

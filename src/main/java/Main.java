@@ -1,4 +1,5 @@
 import integrationend.Utilities.Utility;
+import integrationend.dao.ChoiceList;
 import integrationend.dao.CourseList;
 import integrationend.dao.Transformer;
 import integrationend.server.IntegrationResolver;
@@ -12,7 +13,8 @@ public class Main {
         utility.changeStringToXmlFile("mmmmmmm",filePath);*/
 
         //integrationResolver.getAllCourses("B","A");
-        CourseList c=transformer.transformXMLFileToCourseList("E:\\Work\\数据集成\\homework\\hw02\\integrationEnd\\src\\main\\resources\\static\\formatCourse\\ACourse\\formatCourseAXml.xml");
-        System.out.println(c.toString());
+       // CourseList c=transformer.transformXMLFileToCourseList("E:\\Work\\数据集成\\homework\\DataIntegration\\src\\main\\resources\\static\\formatCourse\\ACourse\\formatCourseAXml.xml");
+        ChoiceList cL=transformer.transformXMLFileToChoiceList("E:\\Work\\数据集成\\homework\\DataIntegration\\src\\main\\resources\\static\\formatChoice\\AChoice\\formatChoiceAXml.xml");
+        System.out.println(cL.toString());
     }
 }

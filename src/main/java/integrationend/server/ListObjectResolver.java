@@ -35,7 +35,7 @@ public class ListObjectResolver {
      */
     public StudentList getAllStudents(String provider){
         boolean isStoreSuccessfully=integrationResolver.getAllStudents(provider);
-        if(isStoreSuccessfully){
+        if(!isStoreSuccessfully){
             return null;
         }
         StudentList studentList=null;
@@ -62,7 +62,7 @@ public class ListObjectResolver {
      */
     public ChoiceList getAllChoices(String provider){
         boolean isStoreSuccessfully=integrationResolver.getAllChoice(provider);
-        if(isStoreSuccessfully){
+        if(!isStoreSuccessfully){
             return null;
         }
         ChoiceList choiceList=null;
@@ -88,7 +88,7 @@ public class ListObjectResolver {
      */
     public CourseList getAllCourses(String provider){
         boolean isStoreSuccessfully=integrationResolver.getAllCourses(provider);
-        if(isStoreSuccessfully){
+        if(!isStoreSuccessfully){
             return null;
         }
         CourseList courseList=null;

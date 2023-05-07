@@ -5,19 +5,24 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "choice")
+@XmlRootElement(name = "chooseCourse")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Choice {
-    @XmlElement(name = "sid")
-    private String sid;
-    @XmlElement(name = "cid")
-    private String cid;
-    @XmlElement(name = "score")
-    private int score;
+    @XmlElement(name = "Sno")
+    private String sno;
+    @XmlElement(name = "Sde")
+    private String sde;
+    @XmlElement(name = "Cno")
+    private int cno;
 
+    @XmlElement(name = "Cde")
+    private int cde;
+
+    @XmlElement(name = "Grd")
+    private int grd;
 
     public String toString(){
-        String result="sid="+sid+" cid="+cid+" score="+score;
+        String result="sno="+sno+" sde="+sde+" cno="+cno+" cde="+cde+" grd="+grd;
         return result;
     }
 }

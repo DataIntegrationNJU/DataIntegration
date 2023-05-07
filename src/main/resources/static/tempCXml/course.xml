@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="gb2312"?>
 
-<courses xmlns="http://www.w3schools.com"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.w3schools.com course.xsd">
+<courses xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com course.xsd">
     <course>
         <Cno>0B01</Cno>
-        <Cnm>鍙ゅ缓绛戦壌瀹氬垎鏋愬</Cnm>
+        <Cnm>古建筑鉴定分析学</Cnm>
         <Cpt>2</Cpt>
-        <Tec>瀛ｅ媷</Tec>
-        <Pla>鍖楁暀302</Pla>
+        <Tec>季勇</Tec>
+        <Pla>北教302</Pla>
     </course>
 
     <course>
         <Cno>0B03</Cno>
-        <Cnm>鍙ゅ缓绛戦壌瀹氬垎鏋愬</Cnm>
+        <Cnm>古建筑鉴定分析学</Cnm>
         <Cpt>3</Cpt>
-        <Tec>榛勫缓绉�</Tec>
-        <Pla>鍗楁暀302</Pla>
+        <Tec>黄建秋</Tec>
+        <Pla>南教302</Pla>
     </course>
 
     <course>
         <Cno>0B07</Cno>
-        <Cnm>鍙ゅ缓绛戦壌瀹氬垎鏋愬</Cnm>
+        <Cnm>古建筑鉴定分析学</Cnm>
         <Cpt>2</Cpt>
-        <Tec>璐轰簯缈�</Tec>
-        <Pla>鍖楁暀102</Pla>
+        <Tec>贺云翱</Tec>
+        <Pla>北教102</Pla>
     </course>
 </courses>
