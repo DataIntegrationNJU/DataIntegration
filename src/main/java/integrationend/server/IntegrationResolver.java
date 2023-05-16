@@ -57,7 +57,7 @@ public class IntegrationResolver {
     public IntegrationResolver(){
         replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"chooseCourse.xsd\"");
         replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.w3schools.com course.xsd\"");
-        replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \"xsi:schemaLocation=\"student.xsd\"");
+        replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"student.xsd\"");
 
     }
 
@@ -829,19 +829,39 @@ public class IntegrationResolver {
                 //todo: 更改获得A学生的url
                 String urlA = Aurl+"/integration/sendXML";
                 //获得xml文件的string形式
-                ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
+/*                ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
                 String AXmlString = AXmlFileResponse.getBody();
-                System.out.println("AXml=" + AXmlString);
+                System.out.println("AXml=" + AXmlString);*/
 
-                /* String AXmlString="";*/
+                 String AXmlString="<?xml version=\"1.0\" encoding=\"gb2312\"?>\n" +
+                         "<students xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"student.xsd\">\n" +
+                         "  <student>\n" +
+                         "    <Sno>190322001</Sno>\n" +
+                         "    <Snm>贾仙盈</Snm>\n" +
+                         "    <Sex>女</Sex>\n" +
+                         "    <Sde>历史学院</Sde>\n" +
+                         "  </student>\n" +
+                         "  <student>\n" +
+                         "    <Sno>190322002</Sno>\n" +
+                         "    <Snm>曹尚清</Snm>\n" +
+                         "    <Sex>男</Sex>\n" +
+                         "    <Sde>历史学院</Sde>\n" +
+                         "  </student>\n" +
+                         "  <student>\n" +
+                         "    <Sno>190322003</Sno>\n" +
+                         "    <Snm>樊婕盈</Snm>\n" +
+                         "    <Sex>女</Sex>\n" +
+                         "    <Sde>历史学院</Sde>\n" +
+                         "  </student>\n" +
+                         "</students>";
 
                 //去除标签中的内容
-                int indexA = AXmlString.indexOf(replaceAttribute.get(1));
+                int indexA = AXmlString.indexOf(replaceAttribute.get(2));
                 if (indexA == -1) {
                     System.err.println("Can't find attribute in AXmlString!");
                 }
 
-                String tA = AXmlString.substring(0, indexA - 1) + AXmlString.substring(indexA + replaceAttribute.get(1).length());
+                String tA = AXmlString.substring(0, indexA - 1) + AXmlString.substring(indexA + replaceAttribute.get(2).length());
                 AXmlString = tA;
 
                 //将string类型的xml转换成xml文件,并将其存入tempFilePathForAXml（tempXXX/originXXX.xml）
@@ -875,12 +895,12 @@ public class IntegrationResolver {
                 //==============end test
 
                 //去除标签中的内容
-                int indexB = BXmlString.indexOf(replaceAttribute.get(1));
+                int indexB = BXmlString.indexOf(replaceAttribute.get(2));
                 if (indexB == -1) {
                     System.err.println("Can't find attribute in BXmlString!");
                 }
 
-                String tB = BXmlString.substring(0, indexB - 1) + BXmlString.substring(indexB + replaceAttribute.get(1).length());
+                String tB = BXmlString.substring(0, indexB - 1) + BXmlString.substring(indexB + replaceAttribute.get(2).length());
                 BXmlString = tB;
 
 
@@ -915,13 +935,13 @@ public class IntegrationResolver {
 
                 //去除标签中的内容
 
-                int indexC = CXmlString.indexOf(replaceAttribute.get(1));
+                int indexC = CXmlString.indexOf(replaceAttribute.get(2));
 
                 if (indexC == -1) {
                     System.err.println("Can't find attribute in CXmlString!");
                 }
 
-                String tC = CXmlString.substring(0, indexC - 1) + CXmlString.substring(indexC + replaceAttribute.get(1).length());
+                String tC = CXmlString.substring(0, indexC - 1) + CXmlString.substring(indexC + replaceAttribute.get(2).length());
                 CXmlString = tC;
 
                 //将String格式的回复存储到本地的xml文件中

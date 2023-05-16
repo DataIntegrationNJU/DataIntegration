@@ -19,4 +19,10 @@ public class IntegrationResolverTester {
         boolean result=integrationResolver.getAllChoice("A");
 
     }
+
+    @Test
+    void testGetAllStudent(){
+        boolean result=integrationResolver.getAllStudents("A");
+
+    }
 }

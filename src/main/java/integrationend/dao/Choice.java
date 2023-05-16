@@ -12,14 +12,15 @@ public class Choice {
     private String sno;
     @XmlElement(name = "Sde")
     private String sde;
+
     @XmlElement(name = "Cno")
-    private int cno;
+    private String cno;
 
     @XmlElement(name = "Cde")
-    private int cde;
+    private String cde;
 
     @XmlElement(name = "Grd")
-    private int grd;
+    private String grd;
 
     public String toString(){
         String result="sno="+sno+" sde="+sde+" cno="+cno+" cde="+cde+" grd="+grd;

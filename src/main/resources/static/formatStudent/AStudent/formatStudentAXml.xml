@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<students>
+  <student>
+    <id>190322001</id>
+    <name/>
+    <sex>女</sex>
+    <major>历史学院</major>
+  </student>
+  <student>
+    <id>190322002</id>
+    <name/>
+    <sex>男</sex>
+    <major>历史学院</major>
+  </student>
+  <student>
+    <id>190322003</id>
+    <name/>
+    <sex>女</sex>
+    <major>历史学院</major>
+  </student>
+</students>
