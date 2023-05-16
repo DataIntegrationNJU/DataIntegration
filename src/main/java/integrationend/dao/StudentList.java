@@ -18,4 +18,8 @@ public class StudentList {
         }
         return result;
     };
+
+    public List<Student> getStudents() {
+        return students;
+    }
 }

@@ -17,9 +17,28 @@ public class Student {
     @XmlElement(name = "major")
     private String major;
 
-    public String toString(){
-        String result="id="+id+" name="+name+" sex="+sex+" major"+major;
+    public String toString() {
+        String result = "id=" + id + " name=" + name + " sex=" + sex + " major" + major;
         return result;
     }
 
+    public void setStudent(String id, String name, String sex, String major) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.major = major;
+    }
+
+    public String getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getSex() {
+        return sex;
+    }
+    public String getMajor() {
+        return major;
+    }
 }

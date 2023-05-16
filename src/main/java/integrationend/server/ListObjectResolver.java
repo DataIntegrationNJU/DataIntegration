@@ -1,11 +1,13 @@
 package integrationend.server;
 
 import integrationend.dao.*;
+import org.springframework.stereotype.Service;
 import org.springframework.util.backoff.BackOff;
 
 /**
  * 这个类用于获得传给前端的对象
  */
+@Service
 public class ListObjectResolver {
     //==================================持久化存储部分路径，用于给集成端可视化使用
     //Choice
