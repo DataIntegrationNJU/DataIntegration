@@ -7,7 +7,6 @@ import integrationend.Utilities.MathAlgorithm;
 import integrationend.dao.Choice;
 import integrationend.dao.Course;
 import integrationend.dao.Student;
-
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
@@ -403,6 +402,10 @@ public class Calculator {
      */
     public JSONArray getChoiceAndCourseInfoByStudentId(String sno) {
         JSONArray jsonArray = new JSONArray();
+
+        List<Course> courseListA = getCourseList("A");
+        List<Course> courseListB = getCourseList("B");
+        List<Course> courseListC = getCourseList("C");
         List<Choice> allChoices = getAllChoice();
         List<Course> allCourses = getAllCourse();
         JSONObject message = new JSONObject();
@@ -435,6 +438,7 @@ public class Calculator {
                 object.put("credit", c.getScore());
                 object.put("teacher", c.getTeacher());
                 object.put("location", c.getLocation());
+                object.put("ABC", getCourseABC(c.getId(), courseListA, courseListB, courseListC));
                 object.put("grade", ch.getGrd());
                 jsonArray.add(object);
             } catch (JSONException e) {
@@ -652,6 +656,147 @@ public class Calculator {
         object.put("standardDiviation", standardDiviation);
         object.put("medium", medium);
         object.put("mode", mode);
+
+        return object;
+    }
+
+    public JSONObject getMenWomenPercentOfOne(String ABC) {
+        List<Student> studentList = getStudentList(ABC);
+        JSONObject object = new JSONObject();
+        if (studentList.isEmpty()) {
+            System.out.println("*【error】*: getStudentList()");
+            object.put("error", "getStudentList()");
+            return object;
+        }
+        int men = 0;
+        int sum = studentList.size();
+        for (Student s : studentList) {
+            if (s.getSex().equals("男")) {
+                men++;
+            }
+        }
+        double menP = men * 1.0 / sum;
+        double womenP = (sum - men) * 1.0 / sum;
+
+        object.put("menPercent", menP);
+        object.put("womenPercent", womenP);
+        return object;
+    }
+
+    public JSONObject getMenWomenPercentOfAll() {
+        List<Student> studentList = getAllStudent();
+        JSONObject object = new JSONObject();
+        if (studentList.isEmpty()) {
+            System.out.println("*【error】*: getAllStudent()");
+            object.put("error", "getAllStudent()");
+            return object;
+        }
+        int men = 0;
+        int sum = studentList.size();
+        for (Student s : studentList) {
+            if (s.getSex().equals("男")) {
+                men++;
+            }
+        }
+        double menP = men * 1.0 / sum;
+        double womenP = (sum - men) * 1.0 / sum;
+
+        object.put("menPercent", menP);
+        object.put("womenPercent", womenP);
+        return object;
+    }
+
+    public JSONObject getAllTeachers() {
+        List<String> teachers = new ArrayList<>();
+        List<Course> courseList = getAllCourse();
+
+        JSONObject object = new JSONObject();
+        if (courseList.isEmpty()) {
+            System.out.println("*【error】*: getAllCourse");
+            object.put("error", "getAllCourse()");
+            return object;
+        }
+
+        for (Course c : courseList) {
+            if (!teachers.contains(c.getTeacher())) {
+                teachers.add(c.getTeacher());
+            }
+        }
+
+        int count = 0;
+        for (String teacher : teachers) {
+            object.put(count, teacher);
+            count++;
+        }
+
+        return object;
+    }
+
+    public JSONObject getCnoByTeacher(String teacherName) {
+        List<Course> courseList = getAllCourse();
+
+        JSONObject object = new JSONObject();
+        if (courseList.isEmpty()) {
+            System.out.println("*【error】*: getAllCourse");
+            object.put("error", "getAllCourse()");
+
+            return object;
+        }
+
+        int count = 0;
+        for (Course c : courseList) {
+            if (c.getTeacher().equals(teacherName)) {
+                object.put(count, c.getId());
+                count++;
+            }
+        }
+
+        return object;
+    }
+
+    public JSONObject getAllLocation() {
+        List<String> locations = new ArrayList<>();
+        List<Course> courseList = getAllCourse();
+
+        JSONObject object = new JSONObject();
+        if (courseList.isEmpty()) {
+            System.out.println("*【error】*: getAllCourse");
+            object.put("error", "getAllCourse()");
+            return object;
+        }
+
+        for (Course c : courseList) {
+            if (!locations.contains(c.getLocation())) {
+                locations.add(c.getLocation());
+            }
+        }
+
+        int count = 0;
+        for (String location : locations) {
+            object.put(count, location);
+            count++;
+        }
+
+        return object;
+    }
+
+    public JSONObject getCnoByLocation(String location) {
+        List<Course> courseList = getAllCourse();
+
+        JSONObject object = new JSONObject();
+        if (courseList.isEmpty()) {
+            System.out.println("*【error】*: getAllCourse");
+            object.put("error", "getAllCourse()");
+            return object;
+        }
+
+        int count = 0;
+        for (Course c : courseList) {
+            if (c.getLocation().equals(location)) {
+                object.put(count, c.getId());
+                count++;
+            }
+        }
 
         return object;
     }

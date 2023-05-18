@@ -123,42 +123,61 @@ public class Viewer {
         return Response.buildSuccess(jsonArray);
     }
 
+    @GetMapping("/getMFPercentOfOne")
+    public Response getMenWomenPercentOfOne(@RequestParam(value = "ABC")String ABC){
+        JSONObject object = calculator.getMenWomenPercentOfOne(ABC);
+        if (object.get("error") != null) {
+            return Response.buildFailed("11111", "操作失败（lwl备注：" + object.get("error") + "）");
+        }
+        return Response.buildSuccess(object);
+    }
 
-//    @GetMapping("/findAllCourse")
-//    public Response findAllCourse(){
-//        List<Course> courses = courseService.findAllCourse();
-//        if(courses==null){
-//            return Response.buildFailure();
-//        }else{
-//            return Response.buildSuccess(courses);
-//        }
-//    }
-//
-//    @GetMapping("/getCourseByCno")
-//    public Response getCourseByCno(@RequestParam(value = "cno")String Cno){
-//        Course course = courseService.getCourseByCno(Cno);
-//        if(course==null){
-//            return Response.buildFailure();
-//        }else{
-//            return Response.buildSuccess(course);
-//        }
-//    }
-//
-//    @PostMapping("/add")
-//    public Response addCourse(@RequestBody Course course){
-//        if(course!=null&& courseService.addCourse(course.getCno(),course.getCnm(),course.getCtm(),course.getCpt(),course.getTec(),course.getPla(),course.getShare())){
-//            return Response.buildSuccess();
-//        }else{
-//            return Response.buildFailure();
-//        }
-//    }
-//
-//    @PostMapping("/update")
-//    public Response updateCourse(@RequestBody Course course){
-//        if(course!=null&& courseService.updateCourse(course.getCno(),course.getCnm(),course.getCtm(),course.getCpt(),course.getTec(),course.getPla(),course.getShare())){
-//            return Response.buildSuccess();
-//        }else{
-//            return Response.buildFailure();
-//        }
-//    }
+    @GetMapping("/getMFPercentOfAll")
+    public Response getMenWomenPercentOfAll(){
+        JSONObject object = calculator.getMenWomenPercentOfAll();
+        if (object.get("error") != null) {
+            return Response.buildFailed("11111", "操作失败（lwl备注：" + object.get("error") + "）");
+        }
+        return Response.buildSuccess(object);
+    }
+
+    @GetMapping("/getAllTeacher")
+    public Response getAllTeacher(){
+        JSONObject jsonObject = calculator.getAllTeachers();
+
+        if (jsonObject.get("error") != null) {
+            return Response.buildFailed("11111", "操作失败（lwl备注：" + jsonObject.get("error") + "）");
+        }
+        return Response.buildSuccess(jsonObject);
+    }
+
+    @GetMapping("/getCnoByTeacher")
+    public Response getCnoByTeacher(@RequestParam(value = "teacherName")String teacherName){
+        JSONObject jsonObject = calculator.getCnoByTeacher(teacherName);
+
+        if (jsonObject.get("error") != null) {
+            return Response.buildFailed("11111", "操作失败（lwl备注：" + jsonObject.get("error") + "）");
+        }
+        return Response.buildSuccess(jsonObject);
+    }
+
+    @GetMapping("/getAllLocation")
+    public Response getAllLocation(){
+        JSONObject jsonObject = calculator.getAllLocation();
+
+        if (jsonObject.get("error") != null) {
+            return Response.buildFailed("11111", "操作失败（lwl备注：" + jsonObject.get("error") + "）");
+        }
+        return Response.buildSuccess(jsonObject);
+    }
+    @GetMapping("/getCnoByLocation")
+    public Response getCnoByLocation(@RequestParam(value = "location")String location){
+        JSONObject jsonObject = calculator.getCnoByLocation(location);
+
+        if (jsonObject.get("error") != null) {
+            return Response.buildFailed("11111", "操作失败（lwl备注：" + jsonObject.get("error") + "）");
+        }
+        return Response.buildSuccess(jsonObject);
+    }
+
 }
