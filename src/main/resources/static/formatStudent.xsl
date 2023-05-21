@@ -15,7 +15,7 @@
 
                     </id>
                     <name>
-                        <xsl:value-of select="姓名|名称Snm"/>
+                        <xsl:value-of select="姓名|名称|Snm"/>
 
                     </name>
                     <sex>

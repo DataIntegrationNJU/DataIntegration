@@ -3,72 +3,72 @@
 <courses>
   <course>
     <id>00001</id>
-    <name>пе╨есКо╣мЁ</name>
+    <name>Д©║Е▐╥Д╦▌ГЁ╩Г╩÷</name>
     <score>3</score>
-    <teacher>уе╨Йа╪</teacher>
-    <location>╤╚╫ля╖б╔-318</location>
+    <teacher>Е╪═Е╝▐Х┴╞</teacher>
+    <location>Д╦°Ф∙≥Е╜╕Ф╔╪-318</location>
   </course>
   <course>
     <id>00002</id>
-    <name>╣Гвспео╒╩Ы╢║</name>
+    <name>Г■╣Е╜░Д©║Ф│╞Е÷╨Г║─</name>
     <score>4</score>
-    <teacher>мУню╧З</teacher>
-    <location>нВ╫ля╖б╔-201</location>
+    <teacher>Г▌▀Е█╚Е⌡╫</teacher>
+    <location>Х╔©Ф∙≥Е╜╕Ф╔╪-201</location>
   </course>
   <course>
     <id>00003</id>
-    <name>CсОятЁлпРиХ╪ф</name>
+    <name>CХ╞╜Х╗─Г╗▀Е╨▐Х╝╬Х╝║</name>
     <score>3</score>
-    <teacher>а╨пш</teacher>
-    <location>╤╚╫ля╖б╔-117</location>
+    <teacher>Ф╒│И⌡└</teacher>
+    <location>Д╦°Ф∙≥Е╜╕Ф╔╪-117</location>
   </course>
   <course>
     <id>00004</id>
-    <name>м╗пе╪╪йУ</name>
+    <name>И─ Д©║Ф┼─Ф°╞</name>
     <score>3</score>
-    <teacher>уен╟хк</teacher>
-    <location>╤╚╫ля╖б╔-221</location>
+    <teacher>Е╪═Д╪÷Д╨╨</teacher>
+    <location>Д╦°Ф∙≥Е╜╕Ф╔╪-221</location>
   </course>
   <course>
     <id>00005</id>
-    <name>╣ГвсCAD</name>
+    <name>Г■╣Е╜░CAD</name>
     <score>2</score>
-    <teacher>еёаа</teacher>
-    <location>нВ╫ля╖б╔-121</location>
+    <teacher>Г┴⌡Д╨╝</teacher>
+    <location>Х╔©Ф∙≥Е╜╕Ф╔╪-121</location>
   </course>
   <course>
     <id>00006</id>
-    <name>г╤хКй╫о╣мЁ</name>
+    <name>Е╣▄Е┘╔Е╪▐ГЁ╩Г╩÷</name>
     <score>3</score>
-    <teacher>уе╨Йа╪</teacher>
-    <location>╤╚╫ля╖б╔-112</location>
+    <teacher>Е╪═Е╝▐Х┴╞</teacher>
+    <location>Д╦°Ф∙≥Е╜╕Ф╔╪-112</location>
   </course>
   <course>
     <id>00007</id>
-    <name>н╒╣Гвс╪╪йУ</name>
+    <name>Е╬╝Г■╣Е╜░Ф┼─Ф°╞</name>
     <score>3</score>
-    <teacher>еёаа</teacher>
-    <location>нВ╫ля╖б╔-121</location>
+    <teacher>Г┴⌡Д╨╝</teacher>
+    <location>Х╔©Ф∙≥Е╜╕Ф╔╪-121</location>
   </course>
   <course>
     <id>00008</id>
-    <name>юКи╒йЩя╖</name>
+    <name>Г╕╩Ф∙ёФ∙╟Е╜╕</name>
     <score>4</score>
-    <teacher>уер╩╡╘</teacher>
-    <location>нВ╫ля╖б╔-121</location>
+    <teacher>Е╪═Д╦─Е█ </teacher>
+    <location>Х╔©Ф∙≥Е╜╕Ф╔╪-121</location>
   </course>
   <course>
     <id>00009</id>
-    <name>╪╞Ёи╣Гб╥иХ╪ф</name>
+    <name>И⌡├Ф┬░Г■╣Х╥╞Х╝╬Х╝║</name>
     <score>2</score>
-    <teacher>аУяехй</teacher>
-    <location>╤╚╫ля╖б╔-112</location>
+    <teacher>Е┬≤И⌡┘Д╩│</teacher>
+    <location>Д╦°Ф∙≥Е╜╕Ф╔╪-112</location>
   </course>
   <course>
     <id>00010</id>
-    <name>╦ъф╣╣Гвс╪╪йУ</name>
+    <name>И╚≤И╒▒Г■╣Е╜░Ф┼─Ф°╞</name>
     <score>2</score>
-    <teacher>юНр╩аа</teacher>
-    <location>╤╚╫ля╖б╔-318</location>
+    <teacher>Ф²▌Д╦─Д╨╝</teacher>
+    <location>Д╦°Ф∙≥Е╜╕Ф╔╪-318</location>
   </course>
 </courses>

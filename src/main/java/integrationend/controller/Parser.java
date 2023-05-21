@@ -94,13 +94,13 @@ public class Parser {
         //为请求所需的url赋值
         switch (requestServer){
             case "A":
-                url="http://192.168.49.187:9092/integration/takeCourse";
+                url="http://192.168.125.171:9092/integration/takeCourse";
                 break;
             case "B":
-                url="http://192.168.49.35:9091/integration/takeCourse";
+                url="http://192.168.125.35:9091/integration/takeCourse";
                 break;
             case "C":
-                url="http://192.168.49.184:9090/integration/takeCourse";
+                url="http://192.168.125.184:9090/integration/takeCourse";
                 break;
         }
        /* System.out.println(request.getHeader("sno"));
@@ -155,13 +155,13 @@ public class Parser {
         //为请求所需的url赋值
         switch (requestServer){
             case "A":
-                url="http://192.168.49.187:9092/integration/delete";
+                url="http://192.168.125.171:9092/integration/delete";
                 break;
             case "B":
-                url="http://192.168.49.35:9091/integration/delete";
+                url="http://192.168.125.35:9091/integration/delete";
                 break;
             case "C":
-                url="http://192.168.49.184:9090/integration/delete";
+                url="http://192.168.125.184:9090/integration/delete";
                 break;
         }
        /* System.out.println(request.getHeader("sno"));
@@ -213,13 +213,13 @@ public class Parser {
         //为请求所需的url赋值
         switch (requestServer){
             case "A":
-                url="http://192.168.49.187:9092/integration/setGrade";
+                url="http://192.168.125.171:9092/integration/setGrade";
                 break;
             case "B":
-                url="http://192.168.49.35:9091/integration/setGrade";
+                url="http://192.168.125.35:9091/integration/setGrade";
                 break;
             case "C":
-                url="http://192.168.49.184:9090/integration/setGrade";
+                url="http://192.168.125.184:9090/integration/setGrade";
                 break;
         }
        /* System.out.println(request.getHeader("sno"));
@@ -254,6 +254,55 @@ public class Parser {
 
         }
     }
+
+    /**
+     * 共享可通信
+     * 获取请求方的选课信息，并通过socket转发
+     * @param request
+     * @param response
+     */
+    @PostMapping("/selectSharedClass")
+    public void selectSharedCourse(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("login!");
+        //根据需要提供的业务进行处理
+        //发给
+        String requestServer=(String) request.getHeader("provider"); //想要请求的服务方
+        String url="";
+        String result="";
+        //为请求所需的url赋值
+        switch (requestServer){
+            case "A":
+                url="http://192.168.125.171:9092/integration/takeCourse";
+                break;
+            case "B":
+                url="http://192.168.125.35:9091/integration/takeCourse";
+                break;
+            case "C":
+                url="http://192.168.125.184:9090/integration/takeCourse";
+                break;
+        }
+       /* System.out.println(request.getHeader("sno"));
+        System.out.println();*/
+
+        Map<String,String> params=new HashMap<>();
+        params.put("sno",request.getHeader("sno"));
+        params.put("cno",request.getHeader("cno"));
+        params.put("de",request.getHeader("de"));
+        //添加信息学号、课程号、select标识
+        ResponseEntity<String> q = HTTPClient.sendPostRequest(url, params);
+        result = q.getBody();
+        System.out.println("result="+result);
+
+
+        try{
+            response.getWriter().println(result);
+        }catch (IOException en){
+
+        }
+
+
+    }
+
 
 
 

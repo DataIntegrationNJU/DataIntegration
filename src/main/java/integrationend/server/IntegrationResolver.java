@@ -21,9 +21,15 @@ public class IntegrationResolver {
     private Utility utility=new Utility();
 
     private XMLResolver xmlResolver=new XMLResolver();
-    private String tempFilePathForAXml="src/main/resources/static/tempAXml/originAXml.xml";
-    private String tempFilePathForBXml="src/main/resources/static/tempBXml/originBXml.xml";
-    private String tempFilePathForCXml="src/main/resources/static/tempCXml/originCXml.xml";
+    private String tempFilePathForAXmlCourse="src/main/resources/static/tempAXml/originACourseXml.xml";
+    private String tempFilePathForAXmlChoice="src/main/resources/static/tempAXml/originAXmlChoice.xml";
+    private String tempFilePathForAXmlStudent="src/main/resources/static/tempAXml/originAXmlStudent.xml";
+    private String tempFilePathForBXmlCourse="src/main/resources/static/tempBXml/originBXmlCourse.xml";
+    private String tempFilePathForBXmlChoice="src/main/resources/static/tempBXml/originBXmlChoice.xml";
+    private String tempFilePathForBXmlStudent="src/main/resources/static/tempBXml/originBXmlStudent.xml";
+    private String tempFilePathForCXmlCourse="src/main/resources/static/tempCXml/originCXmlCourse.xml";
+    private String tempFilePathForCXmlChoice="src/main/resources/static/tempCXml/originCXmlChoice.xml";
+    private String tempFilePathForCXmlStudent="src/main/resources/static/tempCXml/originCXmlStudent.xml";
 
 //==================================持久化存储部分路径，用于给集成端可视化使用
     //Choice
@@ -45,9 +51,9 @@ public class IntegrationResolver {
 
 
     //==================ABC的url
-    String Aurl="http://192.168.49.187:9092";
-    String Burl="http://192.168.49.35:9091";
-    String Curl="http://192.168.49.184:9090";
+    String Aurl="http://192.168.125.171:9092";
+    String Burl="http://192.168.125.35:9091";
+    String Curl="http://192.168.125.184:9090";
 
     /**
      * choice 1/class 2/student 3
@@ -55,9 +61,9 @@ public class IntegrationResolver {
     private List<String> replaceAttribute=new ArrayList();
 
     public IntegrationResolver(){
-        replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"chooseCourse.xsd\"");
+        replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.w3schools.com chooseCourse.xsd\"");
         replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.w3schools.com course.xsd\"");
-        replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"student.xsd\"");
+        replaceAttribute.add("xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.w3schools.com student.xsd\"");
 
     }
 
@@ -117,13 +123,13 @@ public class IntegrationResolver {
                 AXmlString = tA;
 
                 //将string类型的xml转换成xml文件,并将其存入tempFilePathForAXml（tempXXX/originXXX.xml）
-                utility.changeStringToXmlFile(AXmlString, tempFilePathForAXml);
+                utility.changeStringToXmlFile(AXmlString, tempFilePathForAXmlCourse);
 
                 //将发回的请求转换成统一格式，存到了下面路径里面(result/formatXXX.xml)
-                String formatAXmlPath = xmlResolver.ABCToFormat(tempFilePathForAXml, "formatCourseAXml", 2);
+                String formatAXmlPath = xmlResolver.ABCToFormat(tempFilePathForAXmlCourse, "formatCourseAXml", 2);
 
                 //将获得的内容持久化存储
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForAXml, formatACourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForAXmlCourse, formatACourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store A courses!");
@@ -254,14 +260,14 @@ public class IntegrationResolver {
 
 
                 //将String格式的回复存储到本地的xml文件中(tempB/originxxx)
-                utility.changeStringToXmlFile(BXmlString, tempFilePathForBXml);
+                utility.changeStringToXmlFile(BXmlString, tempFilePathForBXmlCourse);
 
 
                 //将发回的请求转换成统一格式，存到了下面两个路径里面(result/format……)
-                String formatBXmlPath = xmlResolver.ABCToFormat(tempFilePathForBXml, "formatCourseBXml", 2);
+                String formatBXmlPath = xmlResolver.ABCToFormat(tempFilePathForBXmlCourse, "formatCourseBXml", 2);
                 System.out.println("format for B:" + formatBXmlPath);
 
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForBXml, formatBCourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForBXmlCourse, formatBCourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store B courses!");
@@ -385,16 +391,16 @@ public class IntegrationResolver {
 
                 //将String格式的回复存储到本地的xml文件中
 
-                utility.changeStringToXmlFile(CXmlString, tempFilePathForCXml);
+                utility.changeStringToXmlFile(CXmlString, tempFilePathForCXmlCourse);
 
 
                 //将发回的请求转换成统一格式，存到了下面两个路径里面
 
-                String formatCXmlPath = xmlResolver.ABCToFormat(tempFilePathForCXml, "formatCourseCXml", 2);
+                String formatCXmlPath = xmlResolver.ABCToFormat(tempFilePathForCXmlCourse, "formatCourseCXml", 2);
                 System.out.println("format for C:" + formatCXmlPath);
 
                 //持久化存储
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForCXml, formatCCourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForCXmlCourse, formatCCourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store C courses!");
@@ -506,13 +512,13 @@ public class IntegrationResolver {
                 AXmlString = tA;
 
                 //将string类型的xml转换成xml文件,并将其存入tempFilePathForAXml（tempXXX/originXXX.xml）
-                utility.changeStringToXmlFile(AXmlString, tempFilePathForAXml);
+                utility.changeStringToXmlFile(AXmlString, tempFilePathForAXmlCourse);
 
                 //将发回的请求转换成统一格式，存到了下面路径里面(result/formatXXX.xml)
-                String formatAXmlPath = xmlResolver.ABCToFormat(tempFilePathForAXml, "formatCourseAXml", 2);
+                String formatAXmlPath = xmlResolver.ABCToFormat(tempFilePathForAXmlCourse, "formatCourseAXml", 2);
 
                 //将获得的内容持久化存储
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForAXml, formatACourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForAXmlCourse, formatACourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store A courses!");
@@ -573,8 +579,10 @@ public class IntegrationResolver {
                 String urlB = Burl+"/integration/sendXML";
 
                 //获得xml文件的string形式
+                System.out.println("============================ B");
                 ResponseEntity<String> BXmlFileResponse = HTTPClient.sendPostRequest(urlB, "");
                 String BXmlString = BXmlFileResponse.getBody();
+                System.out.println("============================ B");
                 System.out.println("BXml=" + BXmlString);
 
 
@@ -643,14 +651,14 @@ public class IntegrationResolver {
 
 
                 //将String格式的回复存储到本地的xml文件中(tempB/originxxx)
-                utility.changeStringToXmlFile(BXmlString, tempFilePathForBXml);
+                utility.changeStringToXmlFile(BXmlString, tempFilePathForBXmlCourse);
 
 
                 //将发回的请求转换成统一格式，存到了下面两个路径里面(result/format……)
-                String formatBXmlPath = xmlResolver.ABCToFormat(tempFilePathForBXml, "formatCourseBXml", 2);
+                String formatBXmlPath = xmlResolver.ABCToFormat(tempFilePathForBXmlCourse, "formatCourseBXml", 2);
                 System.out.println("format for B:" + formatBXmlPath);
 
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForBXml, formatBCourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForBXmlCourse, formatBCourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store B courses!");
@@ -774,16 +782,16 @@ public class IntegrationResolver {
 
                 //将String格式的回复存储到本地的xml文件中
 
-                utility.changeStringToXmlFile(CXmlString, tempFilePathForCXml);
+                utility.changeStringToXmlFile(CXmlString, tempFilePathForCXmlCourse);
 
 
                 //将发回的请求转换成统一格式，存到了下面两个路径里面
 
-                String formatCXmlPath = xmlResolver.ABCToFormat(tempFilePathForCXml, "formatCourseCXml", 2);
+                String formatCXmlPath = xmlResolver.ABCToFormat(tempFilePathForCXmlCourse, "formatCourseCXml", 2);
                 System.out.println("format for C:" + formatCXmlPath);
 
                 //持久化存储
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForCXml, formatCCourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForCXmlCourse, formatCCourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store C courses!");
@@ -841,6 +849,7 @@ public class IntegrationResolver {
     }
 
     /**
+     *  todo:getAllCourse
      * 获得requester的所有课程
      * @param provider
      * @return 返回最终返给requester的文件路径列表
@@ -852,12 +861,13 @@ public class IntegrationResolver {
                 //向A server 发送请求
                 Map<String, String> params = new HashMap<>();
                 //todo:更改获得A课程的url
-                String urlA = Aurl+"/integration/sendXML";
+                String urlA = Aurl+"/integration/sendAllCourse";
                 //获得xml文件的string形式
-/*                ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
+                ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
                 String AXmlString = AXmlFileResponse.getBody();
-                System.out.println("AXml=" + AXmlString);*/
+                System.out.println("AXml in course=" + AXmlString);
 
+/*
                 String AXmlString="<?xml version=\"1.0\" encoding=\"gb2312\"?>\n<courses xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.w3schools.com course.xsd\">\n" +
                         "    <course>\n" +
                         "        <课程编号>05075001</课程编号>\n" +
@@ -883,6 +893,7 @@ public class IntegrationResolver {
                         "        <授课地点>南教513</授课地点>\n" +
                         "    </course>\n" +
                         "</courses>";
+*/
 
                 //去除标签中的内容
                 int indexA = AXmlString.indexOf(replaceAttribute.get(1));
@@ -894,11 +905,11 @@ public class IntegrationResolver {
                 AXmlString = tA;
 
                 //将string类型的xml转换成xml文件,并将其存入tempFilePathForAXml（tempXXX/originXXX.xml）
-                utility.changeStringToXmlFile(AXmlString, tempFilePathForAXml);
+                utility.changeStringToXmlFile(AXmlString, tempFilePathForAXmlCourse);
 
 
                 //将获得的内容持久化存储
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForAXml, formatACourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForAXmlCourse, formatACourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store A courses!");
@@ -911,7 +922,7 @@ public class IntegrationResolver {
                 //向 B server 发送请求
                 Map<String, String> params = new HashMap<>();
                 //todo:更改获得B课程的url
-                String urlB = Burl+"/integration/sendXML";
+                String urlB = Burl+"/integration/sendAllCourse";
 
                 //获得xml文件的string形式
                 ResponseEntity<String> BXmlFileResponse = HTTPClient.sendPostRequest(urlB, "");
@@ -984,10 +995,10 @@ public class IntegrationResolver {
 
 
                 //将String格式的回复存储到本地的xml文件中(tempB/originxxx)
-                utility.changeStringToXmlFile(BXmlString, tempFilePathForBXml);
+                utility.changeStringToXmlFile(BXmlString, tempFilePathForBXmlCourse);
 
 
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForBXml, formatBCourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForBXmlCourse, formatBCourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store B courses!");
@@ -999,7 +1010,7 @@ public class IntegrationResolver {
                 //询问server C
                 Map<String, String> params = new HashMap<>();
                 //todo:更改获得C课程的url
-                String urlC = Curl+"/integration/sendXML";
+                String urlC = Curl+"/integration/sendAllCourse";
                 //获得xml文件的string形式
 
                 ResponseEntity<String> CXmlFileResponse = HTTPClient.sendPostRequest(urlC, "");
@@ -1073,12 +1084,12 @@ public class IntegrationResolver {
 
                 //将String格式的回复存储到本地的xml文件中
 
-                utility.changeStringToXmlFile(CXmlString, tempFilePathForCXml);
+                utility.changeStringToXmlFile(CXmlString, tempFilePathForCXmlCourse);
 
 
 
                 //持久化存储
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForCXml, formatCCourse, 2);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForCXmlCourse, formatCCourse, 2);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store C courses!");
@@ -1094,6 +1105,7 @@ public class IntegrationResolver {
     }
 
     /**
+     * todo:getAllChoice
      * 获得provider的所有选课
      * @param provider 提供课程信息的服务器
      */
@@ -1104,13 +1116,13 @@ public class IntegrationResolver {
                 //向A server 发送请求
                 Map<String, String> params = new HashMap<>();
                 //todo: 更改获得A选课的url
-                String urlA = Aurl+"/integration/sendXML";
+                String urlA = Aurl+"/integration/sendChooseCourse";
                 //获得xml文件的string形式
-/*                ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
+                ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
                 String AXmlString = AXmlFileResponse.getBody();
-                System.out.println("AXml=" + AXmlString);*/
+                System.out.println("AXml=" + AXmlString);
 
-                String AXmlString="<?xml version=\"1.0\" encoding=\"gb2312\"?>\n" +
+/*                String AXmlString="<?xml version=\"1.0\" encoding=\"gb2312\"?>\n" +
                         "<chooseCourses xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"chooseCourse.xsd\">\n" +
                         "    <chooseCourse>\n" +
                         "        <Sno>190322002</Sno>\n" +
@@ -1119,7 +1131,7 @@ public class IntegrationResolver {
                         "        <Cde>C</Cde>\n" +
                         "        <Grd>1</Grd>\n" +
                         "    </chooseCourse>\n" +
-                        "</chooseCourses>";
+                        "</chooseCourses>";*/
 
                 //去除标签中的内容
                 int indexA = AXmlString.indexOf(replaceAttribute.get(0));
@@ -1140,7 +1152,7 @@ public class IntegrationResolver {
                 //向 B server 发送请求
                 Map<String, String> params = new HashMap<>();
                 //todo: 更改获得B选课的url
-                String urlB = Burl+"/integration/sendXML";
+                String urlB = Burl+"/integration/sendChooseCourse";
 
                 //获得xml文件的string形式
                 ResponseEntity<String> BXmlFileResponse = HTTPClient.sendPostRequest(urlB, "");
@@ -1156,7 +1168,7 @@ public class IntegrationResolver {
                 //去除标签中的内容
                 int indexB = BXmlString.indexOf(replaceAttribute.get(0));
                 if (indexB == -1) {
-                    System.err.println("Can't find attribute in AXmlString!");
+                    System.err.println("Can't find attribute in BXmlString!");
                 }
 
                 String tB = BXmlString.substring(0, indexB - 1) + BXmlString.substring(indexB + replaceAttribute.get(0).length());
@@ -1170,7 +1182,7 @@ public class IntegrationResolver {
                 //询问server C
                 Map<String, String> params = new HashMap<>();
                 //todo: 更改获得C选课的url
-                String urlC = Curl+"/integration/sendXML";
+                String urlC = Curl+"/integration/sendChooseCourse";
                 //获得xml文件的string形式
 
                 ResponseEntity<String> CXmlFileResponse = HTTPClient.sendPostRequest(urlC, "");
@@ -1217,13 +1229,16 @@ public class IntegrationResolver {
                 //向A server 发送请求
                 Map<String, String> params = new HashMap<>();
                 //todo: 更改获得A学生的url
-                String urlA = Aurl+"/integration/sendXML";
+                String urlA = Aurl+"/integration/sendStudents";
                 //获得xml文件的string形式
-/*                ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
+//================================getA
+                System.out.println("============================ enterA");
+                ResponseEntity<String> AXmlFileResponse = HTTPClient.sendPostRequest(urlA, "");
                 String AXmlString = AXmlFileResponse.getBody();
-                System.out.println("AXml=" + AXmlString);*/
+                System.out.println("============================ A");
+                System.out.println("AXml=" + AXmlString);
 
-                 String AXmlString="<?xml version=\"1.0\" encoding=\"gb2312\"?>\n" +
+ /*                String AXmlString="<?xml version=\"1.0\" encoding=\"gb2312\"?>\n" +
                          "<students xmlns=\"http://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"student.xsd\">\n" +
                          "  <student>\n" +
                          "    <Sno>190322001</Sno>\n" +
@@ -1243,7 +1258,7 @@ public class IntegrationResolver {
                          "    <Sex>女</Sex>\n" +
                          "    <Sde>历史学院</Sde>\n" +
                          "  </student>\n" +
-                         "</students>";
+                         "</students>";*/
 
                 //去除标签中的内容
                 int indexA = AXmlString.indexOf(replaceAttribute.get(2));
@@ -1255,10 +1270,10 @@ public class IntegrationResolver {
                 AXmlString = tA;
 
                 //将string类型的xml转换成xml文件,并将其存入tempFilePathForAXml（tempXXX/originXXX.xml）
-                utility.changeStringToXmlFile(AXmlString, tempFilePathForAXml);
+                utility.changeStringToXmlFile(AXmlString, tempFilePathForAXmlStudent);
 
                 //将发回的请求转换成统一格式，存到了下面路径里面(formatChoice/AChoice/formatXXX.xml)
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForAXml, formatAStudent, 3);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForAXmlStudent, formatAStudent, 3);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store A students!");
@@ -1271,11 +1286,13 @@ public class IntegrationResolver {
                 //向 B server 发送请求
                 Map<String, String> params = new HashMap<>();
                 //todo: 更改获得B学生的url
-                String urlB = Burl+"/integration/sendXML";
-
+                String urlB = Burl+"/integration/sendStudents";
+                System.out.println("================== B student");
                 //获得xml文件的string形式
                 ResponseEntity<String> BXmlFileResponse = HTTPClient.sendPostRequest(urlB, "");
                 String BXmlString = BXmlFileResponse.getBody();
+                System.out.println("================== B");
+
                 System.out.println("BXml=" + BXmlString);
 
 
@@ -1295,11 +1312,11 @@ public class IntegrationResolver {
 
 
                 //将String格式的回复存储到本地的xml文件中(tempB/originxxx)
-                utility.changeStringToXmlFile(BXmlString, tempFilePathForBXml);
+                utility.changeStringToXmlFile(BXmlString, tempFilePathForBXmlStudent);
 
 
                 //将发回的请求转换成统一格式，存到了下面路径里面(formatChoice/BStudents/formatXXX.xml)
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForBXml, formatBStudent, 3);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForBXmlStudent, formatBStudent, 3);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store B students!");
@@ -1311,7 +1328,7 @@ public class IntegrationResolver {
                 //询问server C
                 Map<String, String> params = new HashMap<>();
                 //todo: 更改获得C学生的url
-                String urlC = Curl+"/integration/sendXML";
+                String urlC = Curl+"/integration/sendStudents";
                 //获得xml文件的string形式
 
                 ResponseEntity<String> CXmlFileResponse = HTTPClient.sendPostRequest(urlC, "");
@@ -1336,11 +1353,11 @@ public class IntegrationResolver {
 
                 //将String格式的回复存储到本地的xml文件中
 
-                utility.changeStringToXmlFile(CXmlString, tempFilePathForCXml);
+                utility.changeStringToXmlFile(CXmlString, tempFilePathForCXmlStudent);
 
 
                 //将发回的请求转换成统一格式，存到了下面路径里面(formatChoice/CChoice/formatXXX.xml)
-                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForCXml, formatCStudent, 3);
+                boolean isChangedSuccessfully = xmlResolver.ABCToFormatGivenFullPath(tempFilePathForCXmlStudent, formatCStudent, 3);
                 System.out.println(isChangedSuccessfully);
                 if (!isChangedSuccessfully) {
                     System.out.println("Fail to store C students!");

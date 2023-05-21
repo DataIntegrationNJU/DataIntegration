@@ -2,73 +2,59 @@
 
 <courses>
   <course>
-    <id>0B01</id>
-    <name>¹Å½¨Öþ¼ø¶¨·ÖÎöÑ§</name>
-    <score>2</score>
-    <teacher>¼¾ÓÂ</teacher>
-    <location>±±½Ì302</location>
-  </course>
-  <course>
-    <id>0B03</id>
-    <name>¿¼¹ÅÑ§ÀíÂÛÓë·½·¨</name>
-    <score>3</score>
-    <teacher>»Æ½¨Çï</teacher>
-    <location>ÄÏ½Ì302</location>
-  </course>
-  <course>
     <id>0B07</id>
-    <name>ÎÄÎïÑ§ÑÐ¾¿</name>
+    <name>æ–‡ç‰©å­¦ç ”ç©¶</name>
     <score>2</score>
-    <teacher>ºØÔÆ°¿</teacher>
-    <location>±±½Ì102</location>
+    <teacher>è´ºäº‘ç¿±</teacher>
+    <location>åŒ—æ•™102</location>
   </course>
   <course>
     <id>0B10</id>
-    <name>³ÇÊÐ¿¼¹ÅÓë³ÇÊÐÎÄ»¯</name>
+    <name>åŸŽå¸‚è€ƒå¤ä¸ŽåŸŽå¸‚æ–‡åŒ–</name>
     <score>2</score>
-    <teacher>¸µÔÙÓý</teacher>
-    <location>ÄÏ½Ì513</location>
+    <teacher>å‚…å†è‚²</teacher>
+    <location>å—æ•™513</location>
   </course>
   <course>
     <id>0B29</id>
-    <name>ÏÈÇØÁ½ººÅ©Òµ¿¼¹ÅÑÐ¾¿</name>
+    <name>å…ˆç§¦ä¸¤æ±‰å†œä¸šè€ƒå¤ç ”ç©¶</name>
     <score>2</score>
-    <teacher>ÁõÐËÁÖ</teacher>
-    <location>ÄÏ½Ì318</location>
+    <teacher>åˆ˜å…´æž—</teacher>
+    <location>å—æ•™318</location>
   </course>
   <course>
     <id>0B55</id>
-    <name>Ô­Éú½¨ÖþÑÐ¾¿</name>
+    <name>åŽŸç”Ÿå»ºç­‘ç ”ç©¶</name>
     <score>1</score>
-    <teacher>³ÌÏþÖÐ</teacher>
-    <location>ÊµÑéÊÒ302</location>
+    <teacher>ç¨‹æ™“ä¸­</teacher>
+    <location>å®žéªŒå®¤302</location>
   </course>
   <course>
     <id>0B63</id>
-    <name>ÖÐ¹úÌØÉ«Éç»áÖ÷Òå</name>
+    <name>ä¸­å›½ç‰¹è‰²ç¤¾ä¼šä¸»ä¹‰</name>
     <score>2</score>
-    <teacher>ÕÅÁ¼ÈÊ</teacher>
-    <location>ÄÏ½Ì303</location>
+    <teacher>å¼ è‰¯ä»</teacher>
+    <location>å—æ•™303</location>
   </course>
   <course>
     <id>0B78</id>
-    <name>ÖÐ¹ú¹Å´úÃÀÊõÊ·ÑÐ¾¿</name>
+    <name>ä¸­å›½å¤ä»£ç¾Žæœ¯å²ç ”ç©¶</name>
     <score>2</score>
-    <teacher>ÂíÏþ¡¢ÖÜÑ§Ó¥</teacher>
-    <location>±±½Ì302</location>
+    <teacher>é©¬æ™“</teacher>
+    <location>åŒ—æ•™302</location>
   </course>
   <course>
     <id>0B89</id>
-    <name>Ã÷ËÄ¼ÒÑÐ¾¿</name>
+    <name>æ˜Žå››å®¶ç ”ç©¶</name>
     <score>2</score>
-    <teacher>Ö£»³èª</teacher>
-    <location>ÄÏ½Ì505</location>
+    <teacher>éƒ‘æ€€ç‘¾</teacher>
+    <location>å—æ•™505</location>
   </course>
   <course>
     <id>0B98</id>
-    <name>Ã÷Çå´ÉÆ÷¼ø¶¨</name>
+    <name>æ˜Žæ¸…ç“·å™¨é‰´å®š</name>
     <score>2</score>
-    <teacher>ÕÅï£Ñà</teacher>
-    <location>ÄÏ½Ì402</location>
+    <teacher>å¼ é“®ç‡•</teacher>
+    <location>å—æ•™402</location>
   </course>
 </courses>

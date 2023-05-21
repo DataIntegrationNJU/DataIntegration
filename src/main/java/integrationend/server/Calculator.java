@@ -33,100 +33,107 @@ public class Calculator {
      * TODO
      */
     public List<Student> getStudentList(String ABC) {
-//        return listObjectResolver.getAllStudents(ABC).getStudents();
-
-        /******/
-        List<Student> studentList = new ArrayList<>();
-        if (ABC.equals("A")) {
-            Student student = new Student();
-            student.setStudent("201905075001", "古璐", "女", "A");
-            Student student2 = new Student();
-            student2.setStudent("201905075003", "严秋伶", "女", "A");
-
-            studentList.add(student);
-            studentList.add(student2);
-        } else if (ABC.equals("B")) {
-            Student student1 = new Student();
-            student1.setStudent("201905075002", "范坤", "男", "B");
-
-            studentList.add(student1);
-        } else if (ABC.equals("C")) {
-            Student student3 = new Student();
-            student3.setStudent("201905075004", "阮龙", "男", "B");
-
-            studentList.add(student3);
-        }
-        return studentList;
-        /*****/
+        return listObjectResolver.getAllStudents(ABC).getStudents();
+//
+//        /******/
+//        List<Student> studentList = new ArrayList<>();
+//        if (ABC.equals("A")) {
+//            Student student = new Student();
+//            student.setStudent("201905075001", "古璐", "女", "A");
+//            Student student2 = new Student();
+//            student2.setStudent("201905075003", "严秋伶", "女", "A");
+//
+//            studentList.add(student);
+//            studentList.add(student2);
+//        } else if (ABC.equals("B")) {
+//            Student student1 = new Student();
+//            student1.setStudent("201905075002", "范坤", "男", "B");
+//
+//            studentList.add(student1);
+//        } else if (ABC.equals("C")) {
+//            Student student3 = new Student();
+//            student3.setStudent("201905075004", "阮龙", "男", "B");
+//
+//            studentList.add(student3);
+//        }
+//        return studentList;
+//        /*****/
     }
 
     public List<Course> getCourseList(String ABC) {
-//        return listObjectResolver.getAllCourses(ABC).getCourses();
+        return listObjectResolver.getAllCourses(ABC).getCourses();
 
 
-        /*****/
-        List<Course> courseList = new ArrayList<>();
-        if (ABC.equals("A")) {
-            Course course = new Course();
-            course.setCourse("05075001", "BIM概论与建模", 2, "陈艳云", "北教302");
-            Course course1 = new Course();
-            course1.setCourse("05075078", "国家公务员录用实务", 2, "陈艳云", "北教302");
-            Course course2 = new Course();
-            course2.setCourse("05075003", "会计信息系统", 3, "郑细端", "南教302");
-            Course course3 = new Course();
-            course3.setCourse("05075010", "工程造价信息管理", 2, "傅再育", "南教513");
-            courseList.add(course);
-            courseList.add(course1);
-            courseList.add(course2);
-            courseList.add(course3);
-        } else if (ABC.equals("B")) {
-            Course course4 = new Course();
-            course4.setCourse("05075089", "计算机审计", 4, "郑怀瑾", "南教505");
-            courseList.add(course4);
-        } else if (ABC.equals("C")) {
-            Course course5 = new Course();
-            course5.setCourse("05075101", "数据库系统原理与操作", 2, "张铮燕", "北教102");
-            courseList.add(course5);
-        }
-
-        return courseList;
-        /*****/
+//        /*****/
+//        List<Course> courseList = new ArrayList<>();
+//        if (ABC.equals("A")) {
+//            Course course = new Course();
+//            course.setCourse("05075001", "BIM概论与建模", 2, "陈艳云", "北教302");
+//            Course course1 = new Course();
+//            course1.setCourse("05075078", "国家公务员录用实务", 2, "陈艳云", "北教302");
+//            Course course2 = new Course();
+//            course2.setCourse("05075003", "会计信息系统", 3, "郑细端", "南教302");
+//            Course course3 = new Course();
+//            course3.setCourse("05075010", "工程造价信息管理", 2, "傅再育", "南教513");
+//            courseList.add(course);
+//            courseList.add(course1);
+//            courseList.add(course2);
+//            courseList.add(course3);
+//        } else if (ABC.equals("B")) {
+//            Course course4 = new Course();
+//            course4.setCourse("05075089", "计算机审计", 4, "郑怀瑾", "南教505");
+//            courseList.add(course4);
+//        } else if (ABC.equals("C")) {
+//            Course course5 = new Course();
+//            course5.setCourse("05075101", "数据库系统原理与操作", 2, "张铮燕", "北教102");
+//            courseList.add(course5);
+//        }
+//
+//        return courseList;
+//        /*****/
 
     }
 
     public List<Choice> getChoiceList(String ABC) {
-//        return listObjectResolver.getAllChoices(ABC).getChoices();
+        return listObjectResolver.getAllChoices(ABC).getChoices();
 
-        /*****/
-        List<Choice> choiceList = new ArrayList<>();
-        if (ABC.equals("A")) {
-            Choice choice = new Choice();
-            choice.setChoice("201905075001", "A", "05075001", "A", 90.0);
-            Choice choice1 = new Choice();
-            choice1.setChoice("201905075001", "A", "05075078", "A", 80.0);
-            Choice choice2 = new Choice();
-            choice2.setChoice("201905075001", "A", "05075003", "A", 70.0);
-
-            choiceList.add(choice);
-            choiceList.add(choice1);
-            choiceList.add(choice2);
-        } else if (ABC.equals("B")) {
-            Choice choice3 = new Choice();
-            choice3.setChoice("201905075002", "B", "05075001", "A", -1.0);
-            Choice choice4 = new Choice();
-            choice4.setChoice("201905075002", "B", "05075078", "A", -1.0);
-
-            choiceList.add(choice3);
-            choiceList.add(choice4);
-        } else {
-
-        }
-        return choiceList;
-        /*****/
+//        /*****/
+//        List<Choice> choiceList = new ArrayList<>();
+//        if (ABC.equals("A")) {
+//            Choice choice = new Choice();
+//            choice.setChoice("201905075001", "A", "05075001", "A", 90.0);
+//            Choice choice1 = new Choice();
+//            choice1.setChoice("201905075001", "A", "05075078", "A", -1.0);
+//            Choice choice2 = new Choice();
+//            choice2.setChoice("201905075001", "A", "05075003", "A", 70.0);
+//            Choice choice3 = new Choice();
+//            choice3.setChoice("201905075003", "A", "05075001", "A", 50.0);
+//
+//            choiceList.add(choice);
+//            choiceList.add(choice1);
+//            choiceList.add(choice2);
+//            choiceList.add(choice3);
+//        } else if (ABC.equals("B")) {
+//            Choice choice3 = new Choice();
+//            choice3.setChoice("201905075002", "B", "05075001", "A", 70.0);
+//            Choice choice4 = new Choice();
+//            choice4.setChoice("201905075002", "B", "05075078", "A", -1.0);
+//
+//            choiceList.add(choice3);
+//            choiceList.add(choice4);
+//        } else {
+//
+//        }
+//        return choiceList;
+//        /*****/
     }
 
 
     public List<Student> getAllStudent() {
+//        List<Student> studentList = getStudentList("A");
+        //System.out.println(studentList);
+
+
         List<Student> studentList = getStudentList("A");
         List<Student> studentList1 = getStudentList("B");
         List<Student> studentList2 = getStudentList("C");
@@ -138,6 +145,8 @@ public class Calculator {
 
 
     public List<Course> getAllCourse() {
+        //List<Course> courseList = getCourseList("A");
+
         List<Course> courseList = getCourseList("A");
         List<Course> courseList1 = getCourseList("B");
         List<Course> courseList2 = getCourseList("C");
@@ -382,7 +391,7 @@ public class Calculator {
             object.put("ABC", "B");
             jsonArray.add(object);
         }
-        for (Course c : courseListB) {
+        for (Course c : courseListC) {
             JSONObject object = new JSONObject();
             object.put("cno", c.getId());
             object.put("cname", c.getName());
@@ -431,6 +440,12 @@ public class Calculator {
 
         for (Choice ch : choices) {
             Course c = getCourseById(ch.getCno(), allCourses);
+            if (c == null) {
+                System.out.println("*【error】*: getCourseById" + ch.getCno());
+                message.put("error", "getCourseById" + ch.getCno());
+                jsonArray.add(message);
+                return jsonArray;
+            }
             try {
                 JSONObject object = new JSONObject();
                 object.put("cno", c.getId());
@@ -478,10 +493,17 @@ public class Calculator {
         int sumScore = 0;
         double sumGrdWithScore = 0.0;
 
+        System.out.println(choices);
+
         int count = 0;
         for (Choice ch : choices) {
             if (ch.getGrd() != -1) {
                 Course c = getCourseById(ch.getCno(), allCourses);
+                if (c == null) {
+                    System.out.println("*【error】*: getCourseById" + ch.getCno());
+                    object.put("error", "getCourseById" + ch.getCno());
+                    return object;
+                }
                 sumScore += c.getScore();
                 double temp = c.getScore() * ch.getGrd();
                 sumGrdWithScore += temp;
@@ -648,8 +670,9 @@ public class Calculator {
         double variance = mathAlgorithm.getVariance(grade);
         double standardDiviation = mathAlgorithm.getStandardDiviation(grade);
         double medium = mathAlgorithm.getMedium(grade);
-        List<Double> mode = mathAlgorithm.getMode(grade);
-
+        List<Double> tempMode = mathAlgorithm.getMode(grade);
+        double[] mode = tempMode.stream().mapToDouble(Double::new).toArray();
+        mathAlgorithm.orderNum(mode);
 
         object.put("average", average);
         object.put("variance", variance);
@@ -675,11 +698,9 @@ public class Calculator {
                 men++;
             }
         }
-        double menP = men * 1.0 / sum;
-        double womenP = (sum - men) * 1.0 / sum;
 
-        object.put("menPercent", menP);
-        object.put("womenPercent", womenP);
+        object.put("men", men);
+        object.put("women", sum - men);
         return object;
     }
 
@@ -698,38 +719,69 @@ public class Calculator {
                 men++;
             }
         }
-        double menP = men * 1.0 / sum;
-        double womenP = (sum - men) * 1.0 / sum;
 
-        object.put("menPercent", menP);
-        object.put("womenPercent", womenP);
+        object.put("men", men);
+        object.put("women", sum - men);
         return object;
     }
 
-    public JSONObject getAllTeachers() {
+    public JSONArray getAllTeachers() {
         List<String> teachers = new ArrayList<>();
-        List<Course> courseList = getAllCourse();
+        List<String> ABC = new ArrayList<>();
 
+        List<Course> courseListA = getCourseList("A");
+        List<Course> courseListB = getCourseList("B");
+        List<Course> courseListC = getCourseList("C");
+
+        JSONArray jsonArray = new JSONArray();
         JSONObject object = new JSONObject();
-        if (courseList.isEmpty()) {
-            System.out.println("*【error】*: getAllCourse");
-            object.put("error", "getAllCourse()");
-            return object;
+        if (courseListA.isEmpty()) {
+            System.out.println("*【error】*: getCourseList(A)");
+            object.put("error", "getCourseList(A)");
+            jsonArray.add(object);
+            return jsonArray;
+        }
+        if (courseListB.isEmpty()) {
+            System.out.println("*【error】*: getCourseList(B)");
+            object.put("error", "getCourseList(B)");
+            jsonArray.add(object);
+            return jsonArray;
+        }
+        if (courseListC.isEmpty()) {
+            System.out.println("*【error】*: getCourseList(C)");
+            object.put("error", "getCourseList(C)");
+            jsonArray.add(object);
+            return jsonArray;
         }
 
-        for (Course c : courseList) {
+        for (Course c : courseListA) {
             if (!teachers.contains(c.getTeacher())) {
                 teachers.add(c.getTeacher());
+                ABC.add("A");
+            }
+        }
+        for (Course c : courseListB) {
+            if (!teachers.contains(c.getTeacher())) {
+                teachers.add(c.getTeacher());
+                ABC.add("B");
+            }
+        }
+        for (Course c : courseListC) {
+            if (!teachers.contains(c.getTeacher())) {
+                teachers.add(c.getTeacher());
+                ABC.add("C");
             }
         }
 
-        int count = 0;
-        for (String teacher : teachers) {
-            object.put(count, teacher);
-            count++;
+        for (int i = 0 ; i < teachers.size() ;i++) {
+            JSONObject o = new JSONObject();
+            o.put("teacherName", teachers.get(i));
+            o.put("ABC", ABC.get(i));
+            jsonArray.add(o);
+
         }
 
-        return object;
+        return jsonArray;
     }
 
     public JSONObject getCnoByTeacher(String teacherName) {

@@ -275,4 +275,24 @@ public class MathAlgorithm {
 
         return modalNums;
     }
+
+    /**
+     * double 和 int 数字排序
+     *
+     * @param n
+     */
+    public void orderNum(double[] n) {
+
+        for (int i = 0; i < n.length - 1; i++) {
+            for (int j = 0; j < n.length - 1 - i; j++) {
+                double temp = 0;
+                if (n[j] > n[j + 1]) {
+                    temp = n[j + 1];
+                    n[j + 1] = n[j];
+                    n[j] = temp;
+                }
+            }
+        }
+    }
+
 }

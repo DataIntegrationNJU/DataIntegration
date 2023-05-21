@@ -54,7 +54,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    studentAReady=true;
+                    //studentAReady=true;
                 }
                 studentList=Transformer.transformXMLFileToStudentList(formatAStudent);
                 break;
@@ -64,7 +64,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    studentBReady=true;
+                    //studentBReady=true;
                 }
                 studentList=Transformer.transformXMLFileToStudentList(formatBStudent);
                 break;
@@ -74,7 +74,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    studentCReady=true;
+                    //studentCReady=true;
                 }
                 studentList=Transformer.transformXMLFileToStudentList(formatCStudent);
                 break;
@@ -99,7 +99,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    choiceAReady=true;
+                    //choiceAReady=true;
                 }
                 choiceList=Transformer.transformXMLFileToChoiceList(formatAChoice);
                 break;
@@ -109,7 +109,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    choiceBReady=true;
+                    //choiceBReady=true;
                 }
                 choiceList=Transformer.transformXMLFileToChoiceList(formatBChoice);
                 break;
@@ -119,7 +119,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    choiceCReady=true;
+                    //choiceCReady=true;
                 }
                 choiceList=Transformer.transformXMLFileToChoiceList(formatCChoice);
                 break;
@@ -143,7 +143,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    courseAReady=true;
+                    //courseAReady=true;
                 }
                 courseList=Transformer.transformXMLFileToCourseList(formatACourse);
                 break;
@@ -153,7 +153,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    courseBReady=true;
+                    //courseBReady=true;
                 }
                 courseList=Transformer.transformXMLFileToCourseList(formatBCourse);
                 break;
@@ -163,7 +163,7 @@ public class ListObjectResolver {
                     if(!isStoreSuccessfully){
                         return null;
                     }
-                    courseCReady=true;
+                    //courseCReady=true;
                 }
                 courseList=Transformer.transformXMLFileToCourseList(formatCCourse);
                 break;

@@ -3,72 +3,72 @@
 <courses>
   <course>
     <id>05075001</id>
-    <name>BIM�����뽨ģ</name>
+    <name>BIM概论与建模</name>
     <score>2</score>
-    <teacher>������</teacher>
-    <location>����302</location>
+    <teacher>陈艳云</teacher>
+    <location>北教302</location>
   </course>
   <course>
     <id>05075003</id>
-    <name>�����Ϣϵͳ</name>
+    <name>会计信息系统</name>
     <score>3</score>
-    <teacher>֣ϸ��</teacher>
-    <location>�Ͻ�302</location>
+    <teacher>郑细端</teacher>
+    <location>南教302</location>
   </course>
   <course>
     <id>05075010</id>
-    <name>���������Ϣ����</name>
+    <name>工程造价信息管理</name>
     <score>2</score>
-    <teacher>������</teacher>
-    <location>�Ͻ�513</location>
+    <teacher>傅再育</teacher>
+    <location>南教513</location>
   </course>
   <course>
     <id>05075029</id>
-    <name>���ͳ��ѧ</name>
+    <name>社会统计学</name>
     <score>3</score>
-    <teacher>������</teacher>
-    <location>�Ͻ�318</location>
+    <teacher>傅再育</teacher>
+    <location>南教318</location>
   </course>
   <course>
     <id>05075078</id>
-    <name>���ҹ���Ա¼��ʵ��</name>
+    <name>国家公务员录用实务</name>
     <score>2</score>
-    <teacher>������</teacher>
-    <location>����302</location>
+    <teacher>陈艳云</teacher>
+    <location>北教302</location>
   </course>
   <course>
     <id>05075089</id>
-    <name>��������</name>
+    <name>计算机审计</name>
     <score>4</score>
-    <teacher>֣���</teacher>
-    <location>�Ͻ�505</location>
+    <teacher>郑怀瑾</teacher>
+    <location>南教505</location>
   </course>
   <course>
     <id>05075101</id>
-    <name>���ݿ�ϵͳԭ�������</name>
+    <name>数据库系统原理与操作</name>
     <score>2</score>
-    <teacher>�����</teacher>
-    <location>����102</location>
+    <teacher>张铮燕</teacher>
+    <location>北教102</location>
   </course>
   <course>
     <id>05075398</id>
-    <name>�˳�ѧ</name>
+    <name>运筹学</name>
     <score>2</score>
-    <teacher>�����</teacher>
-    <location>�Ͻ�402</location>
+    <teacher>张铮燕</teacher>
+    <location>南教402</location>
   </course>
   <course>
     <id>05075555</id>
-    <name>���ز�Ͷ�ʷ���</name>
+    <name>房地产投资分析</name>
     <score>3</score>
-    <teacher>������</teacher>
-    <location>ʵ����302</location>
+    <teacher>徐林明</teacher>
+    <location>实验室302</location>
   </course>
   <course>
     <id>05075763</id>
-    <name>�칫����Ӧ��ʵѵ</name>
+    <name>办公软件应用实训</name>
     <score>2</score>
-    <teacher>����ٻ</teacher>
-    <location>�Ͻ�303</location>
+    <teacher>江彬倩</teacher>
+    <location>南教303</location>
   </course>
 </courses>

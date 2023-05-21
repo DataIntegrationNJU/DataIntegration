@@ -143,12 +143,16 @@ public class Viewer {
 
     @GetMapping("/getAllTeacher")
     public Response getAllTeacher(){
-        JSONObject jsonObject = calculator.getAllTeachers();
+        JSONArray jsonArray = calculator.getAllTeachers();
 
+        if (jsonArray == null) {
+            return Response.buildSuccess("00000", "操作成功，但是结果集为空");
+        }
+        JSONObject jsonObject = jsonArray.getJSONObject(0);
         if (jsonObject.get("error") != null) {
             return Response.buildFailed("11111", "操作失败（lwl备注：" + jsonObject.get("error") + "）");
         }
-        return Response.buildSuccess(jsonObject);
+        return Response.buildSuccess(jsonArray);
     }
 
     @GetMapping("/getCnoByTeacher")

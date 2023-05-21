@@ -382,10 +382,12 @@ public class XMLResolver {
         Document document =null;
         try {
             document=saxReader.read(new FileReader(targetXmlFilePath));//从xml文件获取数据
+            //System.out.println(targetFilePath);
         }catch (FileNotFoundException e){
             System.err.println("Can't find ");
             return false;
         }catch (DocumentException e){
+            System.err.println("Document err "+targetFilePath);
             return false;
         }
 

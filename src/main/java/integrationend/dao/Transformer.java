@@ -45,7 +45,8 @@ public class Transformer {
              reader = new StringReader(courseListStr);
              courseList = (CourseList) unmarshaller.unmarshal(reader);
          }catch (JAXBException e){
-             System.out.println("Can't resolve transition!");
+             System.out.println("Can't resolve transition course! ");
+             System.out.println("["+courseListStr+"]");
          }
 
 
@@ -83,7 +84,7 @@ public class Transformer {
             reader = new StringReader(choiceListStr);
             choiceList = (ChoiceList) unmarshaller.unmarshal(reader);
         }catch (JAXBException e){
-            System.out.println("Can't resolve transition!");
+            System.out.println("Can't resolve transition choice!");
         }
 
         return choiceList;
@@ -116,7 +117,7 @@ public class Transformer {
             reader = new StringReader(studentListStr);
             studentList = (StudentList) unmarshaller.unmarshal(reader);
         }catch (JAXBException e){
-            System.out.println("Can't resolve transition!");
+            System.out.println("Can't resolve transition student!");
         }
 
         return studentList;
